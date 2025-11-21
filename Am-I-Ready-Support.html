@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalCheck - 技术支持与隐私政策</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1E1E1E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --accent-blue: #0A84FF;
+            --accent-orange: #FF9F0A;
+            --divider: #333333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px; /* iOS squircle approximation */
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        
+        /* 简单的图标占位符，实际使用时替换为你的图标图片 */
+        .app-icon span {
+            font-size: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-top: 25px;
+        }
+
+        p, ul {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--divider);
+        }
+
+        /* 隐私政策特定样式 */
+        .privacy-point {
+            margin-bottom: 15px;
+        }
+        .privacy-point strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="app-icon">
+                <!-- 这里将来可以放你的图标 img 标签 -->
+                <span>⚡️</span>
+            </div>
+            <h1>VitalCheck (活力检测)</h1>
+            <p>你的个人身体状态仪表盘</p>
+        </header>
+
+        <!-- 技术支持部分 -->
+        <div class="section" id="support">
+            <h2 style="border-color: var(--accent-blue);">技术支持 (Support)</h2>
+            <p>如果您在使用 <strong>VitalCheck</strong> 过程中遇到任何问题，或者有功能建议，请通过以下方式联系我们：</p>
+            
+            <h3>📮 联系邮箱</h3>
+            <p>请发送邮件至：<a href="mailto:support@example.com">support@example.com</a></p>
+            <!-- 请在部署前将上面的邮箱修改为你自己的邮箱 -->
+
+            <h3>常见问题 (FAQ)</h3>
+            <ul>
+                <li><strong>Q: 平衡测试中的小球为什么不动？</strong><br>A: 该功能依赖于设备的陀螺仪和加速度计，请确保在真机上运行，并授予了必要的运动权限。</li>
+                <li><strong>Q: 我的数据会上传到服务器吗？</strong><br>A: 不会。所有测试数据仅存储在您的手机本地。</li>
+            </ul>
+        </div>
+
+        <!-- 隐私政策部分 -->
+        <div class="section" id="privacy">
+            <h2 style="border-color: var(--accent-orange);">隐私政策 (Privacy Policy)</h2>
+            <p>生效日期：2025年11月21日</p>
+            
+            <p><strong>VitalCheck</strong> 非常重视您的隐私。本应用旨在帮助用户进行简单的身体状态自我测试。以下是我们如何处理您的数据的详细说明：</p>
+
+            <div class="privacy-point">
+                <strong>1. 数据收集与存储 (Data Collection & Storage)</strong>
+                <p>我们<strong>不收集</strong>任何个人身份信息（PII）。所有的测试记录（包括反应时间、平衡得分、点击频率）均仅存储在您设备的本地存储空间（UserDefaults）中。我们没有服务器，也无法访问您的数据。</p>
+            </div>
+
+            <div class="privacy-point">
+                <strong>2. 传感器权限 (Sensors & Permissions)</strong>
+                <p>为了实现测试功能，我们需要访问以下设备权限：</p>
+                <ul>
+                    <li><strong>CoreMotion (运动传感器):</strong> 用于在“平衡测试”中检测设备的倾斜角度。传感器数据仅在测试进行时被实时读取，不会被录制或上传。</li>
+                </ul>
+            </div>
+
+            <div class="privacy-point">
+                <strong>3. 健康免责声明 (Health Disclaimer)</strong>
+                <p>本应用提供的测试结果仅供娱乐和参考，<strong>不作为医疗诊断依据</strong>。如果您感到身体不适，请务必咨询专业医生。</p>
+            </div>
+
+            <div class="privacy-point">
+                <strong>4. 第三方服务 (Third-Party Services)</strong>
+                <p>本应用未集成任何第三方广告SDK或数据分析工具。</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 VitalCheck Team. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
